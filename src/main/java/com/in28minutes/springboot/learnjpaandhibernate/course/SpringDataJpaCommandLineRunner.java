@@ -25,5 +25,11 @@ public class SpringDataJpaCommandLineRunner implements CommandLineRunner {
         Optional<CourseJPA> course = repository.findById(6l);
         System.out.println(course.get());
 
+        System.out.println(repository.findAll());
+        System.out.println(repository.count());
+
+        System.out.println(repository.findByAuthor("in28minutes"));
+        System.out.println(repository.findByName("Learn AWS 1"));
+
     }
 }
